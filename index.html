@@ -1,0 +1,44 @@
+<!-- File: index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Connect Four — HTML/CSS/JS</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+<header>
+<h1>Connect Four — Local 2-player (Web)</h1>
+<div class="controls">
+<button id="undoBtn" class="secondary">Undo</button>
+<button id="restartBtn">Restart</button>
+</div>
+</header>
+
+
+<div class="game">
+<div class="board-wrap">
+<div id="board" class="board" aria-label="Connect Four board"></div>
+</div>
+
+
+<aside class="status">
+<h2 id="state">Player 1's turn</h2>
+<div class="legend small">
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;align-items:center;gap:8px"><div class="dot p1-dot"></div> Player 1</div>
+<div style="display:flex;align-items:center;gap:8px"><div class="dot p2-dot"></div> Player 2</div>
+</div>
+</div>
+<div class="small" style="margin-top:10px">Columns are clickable — click the top of a column to drop a token. Or press keys 1–7.</div>
+<div class="footer">Tip: Record your screen while explaining rules for a short demo video.</div>
+</aside>
+</div>
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
