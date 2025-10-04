@@ -1,0 +1,27 @@
+/* File: styles.css */
+:root{--bg:#0f1724;--board:#0b486b;--cell:#a7ffeb;--p1:#ff6b6b;--p2:#4ecdc4;--empty:#e6eef6}
+*{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+body{margin:0;min-height:100vh;background:linear-gradient(180deg,#071024 0%, #0f1724 100%);color:#e6eef6;display:flex;align-items:center;justify-content:center;padding:24px}
+.app{width:100%;max-width:960px}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+h1{font-size:20px;margin:0}
+.controls{display:flex;gap:8px;align-items:center}
+button{background:#111827;color:#e6eef6;border:0;padding:8px 12px;border-radius:8px;cursor:pointer}
+button.secondary{background:transparent;border:1px solid rgba(230,238,246,0.08)}
+.game{display:flex;gap:18px;align-items:flex-start}
+.board-wrap{background:linear-gradient(180deg,#083046,#0b486b);padding:12px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+.board{display:grid;grid-template-columns:repeat(7,64px);grid-auto-rows:64px;gap:8px;padding:10px;background:transparent;border-radius:8px}
+.col-hover{height:64px;width:64px;display:flex;align-items:center;justify-content:center}
+.cell{width:64px;height:64px;border-radius:50%;background:var(--empty);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 -6px 8px rgba(0,0,0,0.25);transition:transform .12s}
+.cell.token{transform:translateY(-6px)}
+.p1{background:var(--p1)}
+.p2{background:var(--p2)}
+.status{min-width:240px;background:rgba(255,255,255,0.03);padding:14px;border-radius:10px}
+.status h2{margin:0 0 8px 0;font-size:16px}
+.legend{display:flex;gap:8px;align-items:center;margin-top:8px}
+.legend .dot{width:18px;height:18px;border-radius:50%}
+.small{font-size:13px;color:#cbd5e1}
+.footer{margin-top:14px;font-size:13px;color:#9aa9b8}
+.p1-dot{background:var(--p1)}
+.p2-dot{background:var(--p2)}
+@media (max-width:720px){.board{grid-template-columns:repeat(7,44px);grid-auto-rows:44px}.cell{width:44px;height:44px}.app{padding:12px}}
